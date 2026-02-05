@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart - My Orders</title>
+    <link rel="stylesheet" href="orders.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <h1><span class="flip">Flip</span><span class="kart">kart</span></h1>
+                <p class="tagline">My Orders</p>
+            </div>
+            <nav class="nav">
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+                    <li><a href="orders.html" class="active"><i class="fas fa-box"></i> My Orders</a></li>
+                    <li><a href="index.html#reviews"><i class="fas fa-star"></i> Reviews</a></li>
+                    <li><a href="index.html#profile"><i class="fas fa-user"></i> Profile</a></li>
+                </ul>
+            </nav>
+            <div class="user-menu">
+                <span class="user-name">Rahul Sharma</span>
+                <div class="user-avatar">
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="orders-container">
+        <div class="orders-header">
+            <h2><i class="fas fa-box"></i> My Orders</h2>
+            <div class="orders-filter">
+                <select id="statusFilter">
+                    <option value="all">All Orders</option>
+                    <option value="placed">Placed</option>
+                    <option value="shipped">Shipped</option>
+                    <option value="delivered">Delivered</option>
+                </select>
+                <select id="timeFilter">
+                    <option value="all">All Time</option>
+                    <option value="last30">Last 30 Days</option>
+                    <option value="last90">Last 90 Days</option>
+                    <option value="2023">2023</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="orders-list" id="ordersList">
+            <!-- Orders will be loaded by JavaScript -->
+        </div>
+
+        <div class="orders-summary">
+            <div class="summary-card">
+                <h3><i class="fas fa-chart-line"></i> Order Summary</h3>
+                <div class="summary-stats">
+                    <div class="stat">
+                        <span class="stat-value">12</span>
+                        <span class="stat-label">Total Orders</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">₹1,43,788</span>
+                        <span class="stat-label">Total Spent</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">10</span>
+                        <span class="stat-label">Delivered</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">1</span>
+                        <span class="stat-label">Shipped</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <p>&copy; 2023 Flipkart. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="orders.js"></script>
+</body>
+</html>
