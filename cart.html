@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Cart - Your Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Flipkart Cart</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#" class="nav-link active">My Cart</a>
+                <a href="checkout.html" class="nav-link">Checkout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-container">
+        <div class="cart-container">
+            <!-- Cart Header -->
+            <div class="cart-header">
+                <h1>My Shopping Cart</h1>
+                <p class="items-count">2 items</p>
+            </div>
+
+            <!-- Cart Items Section -->
+            <div class="cart-content">
+                <div class="cart-items-section">
+                    <div class="cart-items-header">
+                        <span class="header-product">Product</span>
+                        <span class="header-price">Price</span>
+                        <span class="header-quantity">Quantity</span>
+                        <span class="header-total">Total</span>
+                        <span class="header-action">Action</span>
+                    </div>
+
+                    <div class="cart-items" id="cart-items-container">
+                        <!-- Cart items will be dynamically added here -->
+                    </div>
+
+                    <!-- Continue Shopping Button -->
+                    <div class="cart-actions">
+                        <a href="#" class="continue-shopping">
+                            <i class="fas fa-arrow-left"></i> Continue Shopping
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Price Summary Section -->
+                <div class="price-summary-section">
+                    <div class="price-summary">
+                        <h2>Price Summary</h2>
+                        
+                        <div class="price-row">
+                            <span>Subtotal</span>
+                            <span id="subtotal">₹0</span>
+                        </div>
+                        
+                        <div class="price-row">
+                            <span>Discount</span>
+                            <span class="discount" id="discount">-₹0</span>
+                        </div>
+                        
+                        <div class="price-row">
+                            <span>Delivery Charges</span>
+                            <span>FREE</span>
+                        </div>
+                        
+                        <div class="divider"></div>
+                        
+                        <div class="price-row total">
+                            <span>Total Amount</span>
+                            <span id="total">₹0</span>
+                        </div>
+                        
+                        <button class="checkout-btn" onclick="window.location.href='checkout.html'">
+                            Proceed to Checkout
+                        </button>
+                        
+                        <div class="secure-payment">
+                            <i class="fas fa-lock"></i>
+                            <span>Safe and Secure Payments</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Promo Code Section -->
+                    <div class="promo-section">
+                        <h3>Apply Promo Code</h3>
+                        <div class="promo-input">
+                            <input type="text" placeholder="Enter promo code">
+                            <button class="apply-btn">APPLY</button>
+                        </div>
+                        <p class="promo-info">Save extra with our promo codes</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 Flipkart Cart. This is a frontend-only demo project.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="cart.js"></script>
+</body>
+</html>

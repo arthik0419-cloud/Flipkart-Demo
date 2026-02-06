@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart Checkout - Secure Payment</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-shopping-cart"></i>
+                <span>Flipkart Checkout</span>
+            </div>
+            <nav class="nav-links">
+                <a href="cart.html" class="nav-link">My Cart</a>
+                <a href="#" class="nav-link active">Checkout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container main-container">
+        <div class="checkout-container">
+            <!-- Checkout Header -->
+            <div class="cart-header">
+                <h1>Checkout</h1>
+                <p class="items-count">Secure Payment</p>
+            </div>
+
+            <!-- Checkout Steps -->
+            <div class="checkout-steps">
+                <div class="step active">
+                    <div class="step-number">1</div>
+                    <div class="step-label">Address</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-label">Payment</div>
+                </div>
+                <div class="step-line"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-label">Confirmation</div>
+                </div>
+            </div>
+
+            <!-- Checkout Content -->
+            <div class="checkout-content">
+                <!-- Delivery Address Section -->
+                <div class="checkout-section">
+                    <h2><i class="fas fa-map-marker-alt"></i> Delivery Address</h2>
+                    
+                    <div class="address-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" placeholder="Enter your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Mobile Number *</label>
+                                <input type="tel" id="phone" placeholder="Enter 10-digit mobile number" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="address">Address *</label>
+                            <textarea id="address" rows="3" placeholder="Enter your complete address" required></textarea>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="city">City *</label>
+                                <input type="text" id="city" placeholder="Enter your city" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="state">State *</label>
+                                <select id="state" required>
+                                    <option value="">Select State</option>
+                                    <option value="Delhi">Delhi</option>
+                                    <option value="Maharashtra">Maharashtra</option>
+                                    <option value="Karnataka">Karnataka</option>
+                                    <option value="Tamil Nadu">Tamil Nadu</option>
+                                    <option value="West Bengal">West Bengal</option>
+                                    <option value="Uttar Pradesh">Uttar Pradesh</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="pincode">Pincode *</label>
+                                <input type="text" id="pincode" placeholder="Enter 6-digit pincode" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="landmark">Landmark (Optional)</label>
+                                <input type="text" id="landmark" placeholder="Nearby landmark">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="save-address">
+                            <label for="save-address">Save this address for future use</label>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Method Section -->
+                <div class="checkout-section">
+                    <h2><i class="fas fa-credit-card"></i> Payment Method</h2>
+                    
+                    <div class="payment-methods">
+                        <div class="payment-option selected" data-method="cod">
+                            <div class="payment-radio">
+                                <div class="radio-dot"></div>
+                            </div>
+                            <div class="payment-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <div class="payment-details">
+                                <h3>Cash on Delivery</h3>
+                                <p>Pay when you receive the order</p>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-option" data-method="upi">
+                            <div class="payment-radio">
+                                <div class="radio-dot"></div>
+                            </div>
+                            <div class="payment-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div class="payment-details">
+                                <h3>UPI</h3>
+                                <p>Pay using any UPI app</p>
+                            </div>
+                            <div class="payment-logos">
+                                <span class="upi-logo">GPay</span>
+                                <span class="upi-logo">PhonePe</span>
+                                <span class="upi-logo">Paytm</span>
+                            </div>
+                        </div>
+                        
+                        <div class="payment-option" data-method="card">
+                            <div class="payment-radio">
+                                <div class="radio-dot"></div>
+                            </div>
+                            <div class="payment-icon">
+                                <i class="fas fa-credit-card"></i>
+                            </div>
+                            <div class="payment-details">
+                                <h3>Credit/Debit Card</h3>
+                                <p>Pay using your card</p>
+                            </div>
+                            <div class="payment-logos">
+                                <i class="fab fa-cc-visa"></i>
+                                <i class="fab fa-cc-mastercard"></i>
+                                <i class="fab fa-cc-amex"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order Summary Section -->
+                <div class="checkout-section">
+                    <h2><i class="fas fa-receipt"></i> Order Summary</h2>
+                    
+                    <div class="order-summary">
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <span>Apple iPhone 14 Pro (256 GB, Deep Purple)</span>
+                                    <span>Qty: 1</span>
+                                </div>
+                                <div class="order-item-price">₹129,999</div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <span>Sony WH-1000XM4 Wireless Headphones</span>
+                                    <span>Qty: 1</span>
+                                </div>
+                                <div class="order-item-price">₹24,990</div>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-item-info">
+                                    <span>Nike Air Max 270 (Men's Running Shoes, Size 10)</span>
+                                    <span>Qty: 2</span>
+                                </div>
+                                <div class="order-item-price">₹21,990</div>
+                            </div>
+                        </div>
+                        
+                        <div class="order-totals">
+                            <div class="price-row">
+                                <span>Subtotal</span>
+                                <span>₹176,979</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Discount</span>
+                                <span class="discount">-₹17,698</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Delivery Charges</span>
+                                <span>FREE</span>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="price-row total">
+                                <span>Total Amount</span>
+                                <span>₹159,281</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="checkout-actions">
+                    <a href="cart.html" class="back-to-cart">
+                        <i class="fas fa-arrow-left"></i> Back to Cart
+                    </a>
+                    <button class="place-order-btn" id="place-order-btn">
+                        <i class="fas fa-bolt"></i> Place Order
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2023 Flipkart Checkout. This is a frontend-only demo project.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Use</a>
+                <a href="#">Help Center</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
